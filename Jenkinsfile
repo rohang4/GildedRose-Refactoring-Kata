@@ -22,9 +22,11 @@ stages {
             }
      }	
 stage ('Email Notification'){
+	 steps {
 	 mail bcc: '', body: ''' Welcome to email alert.
 	 Thanks
 	 Rohan''', cc: '', replyTo: '', subject: 'Jenkins Job', to: 'gonsalvez01@gmail.com'
+	 }
 	 }
    
 }
