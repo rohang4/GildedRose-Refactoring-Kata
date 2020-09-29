@@ -21,6 +21,10 @@ stages {
             sh "mvn site"
             }
      }	
- 	 
+ stage ('---surefire-report---'){
+     steps {
+            sh "mvn surefire-report:report"
+            }
+     }		 
 }
 }
