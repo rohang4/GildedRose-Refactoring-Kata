@@ -6,22 +6,22 @@ maven 'Maven'
 stages {
    stage ('---clean---'){
      steps {
-            sh "mvn clean"
+            sh 'mvn clean'
             }
      }			
   stage ('---test---'){
      steps {
-            sh "mvn test"
+            sh 'mvn test'
             }
      }	
   stage ('---package---'){
      steps {
-            sh "mvn package"
+            sh 'mvn package'
             }
      }	
   stage ('---site---'){
      steps {
-            sh "mvn site"
+            sh 'mvn site'
             }
      }	
 stage ('Email Notification'){
