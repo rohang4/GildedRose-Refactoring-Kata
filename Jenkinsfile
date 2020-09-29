@@ -21,10 +21,11 @@ stages {
             sh "mvn site"
             }
      }	
- stage ('---surefire-report---'){
-     steps {
-            sh "mvn surefire-report:report"
-            }
-     }		 
+stage ('Email Notification'){
+	 mail bcc: '', body: ''' Welcome to email alert.
+	 Thanks
+	 Rohan''', cc: '', replyTo: '', subject: 'Jenkins Job', to: 'gonsalvez01@gmail.com'
+	 }
+   
 }
 }
